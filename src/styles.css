@@ -1,0 +1,43 @@
+/* You can add global styles to this file, and also import other style files */
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.h-box {
+    height: 500px;
+}
+
+.h-box1 {
+    height: 600px;
+}
+
+.h-about{
+    height: 900px;
+}
+
+.w-530{
+    width: 530px;
+}
+
+.w-imglg{
+    width: 445px;
+}
+
+.btn_active{
+    background-color: rgb(120, 120, 120) ;
+}
+
+.dancing-script {
+    font-family: "Dancing Script", cursive;
+  }

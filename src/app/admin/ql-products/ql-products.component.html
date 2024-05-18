@@ -1,0 +1,55 @@
+<div class="flex items-center place-content-between ">
+
+    <div class="font-semibold text-xl">
+        <h3>Products</h3>
+    </div>
+    <!-- You can open the modal using ID.showModal() method -->
+    <button class="btn bg-blue-500" onclick="my_modal_4.showModal()">
+        <svg stroke="currentColor" fill="#FFF" stroke-width="0" viewBox="0 0 24 24" class="text-[1.4rem] text-whites" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><g id="Circle_Plus"><g><path d="M15,12.5H12.5V15a.5.5,0,0,1-1,0V12.5H9a.5.5,0,0,1,0-1h2.5V9a.5.5,0,0,1,1,0v2.5H15A.5.5,0,0,1,15,12.5Z"></path><path d="M12,21.932A9.934,9.934,0,1,1,21.932,12,9.944,9.944,0,0,1,12,21.932ZM12,3.065A8.934,8.934,0,1,0,20.932,12,8.944,8.944,0,0,0,12,3.065Z"></path></g></g></svg>
+    </button>
+    <dialog id="my_modal_4" class="modal">
+    <div class="modal-box w-11/12 max-w-5xl">
+        <h3 class="font-bold text-lg">Hello!</h3>
+        <p class="py-4">Click the button below to close</p>
+        <div class="modal-action">
+        <form method="dialog">
+            <!-- if there is a button, it will close the modal -->
+            <button class="btn">Close</button>
+        </form>
+        </div>
+    </div>
+    </dialog>
+</div>
+
+<div class="bg-white rounded-xl  p-1 mt-6">
+    <div class="overflow-x-auto">
+        <table class="table">
+          <!-- head -->
+          <thead>
+            <tr>
+              <th>STT</th>
+              <th>Name</th>
+              <th>Image</th>
+              <th>Quantity</th>
+              <th>Price</th>
+              <th>Manipulation</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (data of data; track data.id) {  
+                <tr>
+                <th>{{data.id}}</th>
+                <td>{{data.name}}</td>
+                <td><img class="size-28" src="../assets/img/{{data.img}}" alt=""></td>
+                <td>{{data.quantity}}</td>
+                <td>{{data.price | number}} VNĐ</td>
+                <td>
+                    <button class="btn bg-yellow-300 text-white mr-4">Sửa</button>
+                    <button class="btn bg-red-500 text-white" (click)="deleteProduct(data.id)">Xoá</button>
+                </td>
+                </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+</div>
