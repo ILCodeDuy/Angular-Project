@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { QlProductsComponent } from './admin/ql-products/ql-products.component';
 import { QlCategoriesComponent } from './admin/ql-categories/ql-categories.component';
+import { LoginComponent } from './components/login/login.component';
 
 export const routes: Routes = [
     {
@@ -13,6 +14,10 @@ export const routes: Routes = [
     {
         path: '',
         component: HomeComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     },
     {
         path: 'admin',
